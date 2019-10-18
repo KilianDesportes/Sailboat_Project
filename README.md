@@ -13,3 +13,30 @@ Alimentation   →  Carte electronique  → OUTPUT : ADC Tension proportionnel v
 </pre>
 
 Utilisation librairies LL pour les périphériques USART & GPIO (+ Timer & ADC?).
+
+Association des PINs aux périphériques :
+
+<pre>
+Girouette           → PA.6 =  Timer 3 - Voie 1 
+                    → PA.7 =  Timer 3 - Voie 2
+                    → PA.5 =  GPIO
+                    
+Accelerometre       → PC.0 X =  ADC IN 10
+                    → PC.1 Y =  ADC IN 11
+                    
+Alimentation        → PC.2   =  ADC IN 12
+
+Moteur CC           → PA.1   =  Timer 2 - CH2
+                    → PA.2   =  GPIO
+
+Servo Voile         → PA.8    = Timer 1 - CH1
+                      ou PB.8 = Timer 4 - CH3
+
+RxFM                → PB.6 et PB.7 = Timer 4 - CH1 et CH2
+
+TxFM                → PA.9 = UART 1
+                    → PA.11 = GPIO
+                  
+
+
+</pre>
