@@ -37,39 +37,10 @@ Time * time_read;
 
 int main(void)
 {
-  /* Configure the system clock to 72 MHz */
   SystemClock_Config();
 
-  /* Add your application code here */
-  // Configuration chronomètre
-	Chrono_Conf(TIM3);
-	
-	// Lancement chronomètre
-	//Chrono_Start(); 
-	
-	Chrono_Start();
-		
-	while(1){
-		
-		
-/*		if ( LL_GPIO_IsInputPinSet(GPIOC, LL_GPIO_PIN_8) ) {
-			Chrono_Start();
-		}else if ( LL_GPIO_IsInputPinSet(GPIOC, LL_GPIO_PIN_6) ) {
-			Chrono_Stop();
-		}else if ( !LL_GPIO_IsInputPinSet(GPIOC, LL_GPIO_PIN_13) ){
-			Chrono_Reset();
-		}
-	*/	
-		time_read = Chrono_Read();
-		
-		
-	}
+  Voile_Conf(TIM1);
 }
-
-
-
-
-
 
 
 /**

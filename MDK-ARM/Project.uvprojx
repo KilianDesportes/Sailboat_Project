@@ -382,9 +382,24 @@
           <GroupName>User Application</GroupName>
           <Files>
             <File>
+              <FileName>girouette.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\girouette.c</FilePath>
+            </File>
+            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/main.c</FilePath>
+            </File>
+            <File>
+              <FileName>voile.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\voile.c</FilePath>
+            </File>
+            <File>
+              <FileName>voile.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\voile.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -849,9 +864,24 @@
           <GroupName>User Application</GroupName>
           <Files>
             <File>
+              <FileName>girouette.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\girouette.c</FilePath>
+            </File>
+            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/main.c</FilePath>
+            </File>
+            <File>
+              <FileName>voile.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\voile.c</FilePath>
+            </File>
+            <File>
+              <FileName>voile.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\voile.h</FilePath>
             </File>
           </Files>
         </Group>
