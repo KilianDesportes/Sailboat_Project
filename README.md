@@ -36,7 +36,4 @@ RxFM                → PB.6 et PB.7 = Timer 4 - CH1 et CH2
 
 TxFM                → PA.9 = UART 1
                     → PA.11 = GPIO
-                  
-
-
 </pre>
