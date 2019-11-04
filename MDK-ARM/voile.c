@@ -35,12 +35,7 @@ void Voile_Conf(TIM_TypeDef * Timer)
 	LL_TIM_EnableAllOutputs(Timer);
 	
 	LL_TIM_EnableCounter(Timer);
-	
-	
-	
-	
-	
-	
+
 }
 
 
