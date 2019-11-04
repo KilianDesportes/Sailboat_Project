@@ -13,3 +13,8 @@ nucleo-f103rb\main.o: ..\LLDrivers\inc\stm32f1xx_ll_system.h
 nucleo-f103rb\main.o: ..\LLDrivers\inc\stm32f1xx_ll_gpio.h
 nucleo-f103rb\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 nucleo-f103rb\main.o: ..\Services\Chrono.h
+nucleo-f103rb\main.o: ..\MDK-ARM\moteurcc.h
+nucleo-f103rb\main.o: ..\MyDrivers\MyTimer.h
+nucleo-f103rb\main.o: ..\LLDrivers\inc\stm32f1xx_ll_bus.h
+nucleo-f103rb\main.o: ..\LLDrivers\inc\stm32f1xx_ll_usart.h
+nucleo-f103rb\main.o: ..\LLDrivers\inc\stm32f1xx_ll_tim.h

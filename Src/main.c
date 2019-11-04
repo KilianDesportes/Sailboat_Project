@@ -23,6 +23,7 @@
 #include "stdlib.h"
 
 #include "Chrono.h"
+#include "moteurcc.h"
 
 void  SystemClock_Config(void);
 
@@ -38,8 +39,8 @@ Time * time_read;
 int main(void)
 {
   SystemClock_Config();
-
-  Voile_Conf(TIM1);
+	MoteurCC_Congif(TIM2,750);
+  //Voile_Conf(TIM1);
 }
 
 

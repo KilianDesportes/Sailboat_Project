@@ -7,4 +7,4 @@
 #include "stdlib.h"
 #include "stm32f103xb.h" 
 
-void Girouette_Conf(TIM_TypeDef * Timer);
+void MoteurCC_Congif(TIM_TypeDef * Timer, int valeurTelecommande);
