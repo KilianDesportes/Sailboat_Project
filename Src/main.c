@@ -21,8 +21,8 @@
 #include "stm32f1xx_ll_system.h" // utile dans la fonction SystemClock_Config
 #include "stm32f1xx_ll_gpio.h"
 #include "stdlib.h"
-
 #include "Chrono.h"
+#include "girouette.h"
 
 void  SystemClock_Config(void);
 
@@ -38,8 +38,9 @@ Time * time_read;
 int main(void)
 {
   SystemClock_Config();
+	Girouette_Conf(TIM3);
 
-  Voile_Conf(TIM1);
+  //Voile_Conf(TIM1);
 }
 
 

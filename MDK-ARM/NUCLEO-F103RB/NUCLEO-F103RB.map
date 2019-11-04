@@ -4,10 +4,12 @@ Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
 
 Section Cross References
 
+    girouette.o(i.Girouette_Conf) refers to stm32f1xx_ll_gpio.o(i.LL_GPIO_Init) for LL_GPIO_Init
+    girouette.o(i.Girouette_Conf) refers to girouette.o(i.LL_TIM_CC_EnableChannel) for LL_TIM_CC_EnableChannel
     main.o(i.SystemClock_Config) refers to stm32f1xx_ll_utils.o(i.LL_Init1msTick) for LL_Init1msTick
     main.o(i.SystemClock_Config) refers to stm32f1xx_ll_utils.o(i.LL_SetSystemCoreClock) for LL_SetSystemCoreClock
     main.o(i.main) refers to main.o(i.SystemClock_Config) for SystemClock_Config
-    main.o(i.main) refers to voile.o(i.Voile_Conf) for Voile_Conf
+    main.o(i.main) refers to girouette.o(i.Girouette_Conf) for Girouette_Conf
     voile.o(i.LL_TIM_OC_SetMode) refers to voile.o(.constdata) for OFFSET_TAB_CCMRx
     voile.o(i.Voile_Conf) refers to memcpya.o(.text) for __aeabi_memcpy4
     voile.o(i.Voile_Conf) refers to stm32f1xx_ll_gpio.o(i.LL_GPIO_Init) for LL_GPIO_Init
@@ -157,17 +159,21 @@ Removing Unused input sections from the image.
     Removing girouette.o(.rev16_text), (4 bytes).
     Removing girouette.o(.revsh_text), (4 bytes).
     Removing girouette.o(.rrx_text), (6 bytes).
-    Removing girouette.o(i.Girouette_Conf), (2 bytes).
     Removing girouette.o(i.Girouette_Reset), (2 bytes).
     Removing girouette.o(i.Girouette_Start), (2 bytes).
     Removing girouette.o(i.Girouette_Stop), (2 bytes).
+    Removing girouette.o(.constdata), (35 bytes).
     Removing main.o(.rev16_text), (4 bytes).
     Removing main.o(.revsh_text), (4 bytes).
     Removing main.o(.rrx_text), (6 bytes).
+    Removing main.o(.constdata), (35 bytes).
     Removing main.o(.data), (4 bytes).
     Removing voile.o(.rev16_text), (4 bytes).
     Removing voile.o(.revsh_text), (4 bytes).
     Removing voile.o(.rrx_text), (6 bytes).
+    Removing voile.o(i.LL_TIM_OC_SetMode), (108 bytes).
+    Removing voile.o(i.Voile_Conf), (156 bytes).
+    Removing voile.o(.constdata), (56 bytes).
     Removing chrono.o(.rev16_text), (4 bytes).
     Removing chrono.o(.revsh_text), (4 bytes).
     Removing chrono.o(.rrx_text), (6 bytes).
@@ -239,6 +245,7 @@ Removing Unused input sections from the image.
     Removing stm32f1xx_ll_tim.o(i.LL_TIM_HALLSENSOR_StructInit), (12 bytes).
     Removing stm32f1xx_ll_tim.o(i.LL_TIM_IC_Init), (92 bytes).
     Removing stm32f1xx_ll_tim.o(i.LL_TIM_IC_StructInit), (18 bytes).
+    Removing stm32f1xx_ll_tim.o(i.LL_TIM_Init), (276 bytes).
     Removing stm32f1xx_ll_tim.o(i.LL_TIM_OC_Init), (92 bytes).
     Removing stm32f1xx_ll_tim.o(i.LL_TIM_OC_SetCompareCH2), (4 bytes).
     Removing stm32f1xx_ll_tim.o(i.LL_TIM_OC_StructInit), (20 bytes).
@@ -274,7 +281,7 @@ Removing Unused input sections from the image.
     Removing system_stm32f1xx.o(.constdata), (24 bytes).
     Removing startup_stm32f103xb.o(HEAP), (512 bytes).
 
-119 unused section(s) (total 10452 bytes) removed from the image.
+124 unused section(s) (total 11116 bytes) removed from the image.
 
 ==============================================================================
 
@@ -286,21 +293,21 @@ Image Symbol Table
 
     ../Src/main.c                            0x00000000   Number         0  main.o ABSOLUTE
     ../Src/system_stm32f1xx.c                0x00000000   Number         0  system_stm32f1xx.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
-    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
     ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
     ..\LLDrivers\src\stm32f1xx_ll_gpio.c     0x00000000   Number         0  stm32f1xx_ll_gpio.o ABSOLUTE
     ..\LLDrivers\src\stm32f1xx_ll_rcc.c      0x00000000   Number         0  stm32f1xx_ll_rcc.o ABSOLUTE
     ..\LLDrivers\src\stm32f1xx_ll_tim.c      0x00000000   Number         0  stm32f1xx_ll_tim.o ABSOLUTE
@@ -337,34 +344,26 @@ Image Symbol Table
     .ARM.Collect$$$$00002712                 0x080000fc   Section        4  entry2.o(.ARM.Collect$$$$00002712)
     __lit__00000000                          0x080000fc   Data           4  entry2.o(.ARM.Collect$$$$00002712)
     .text                                    0x08000100   Section       36  startup_stm32f103xb.o(.text)
-    .text                                    0x08000124   Section        0  memcpya.o(.text)
-    .text                                    0x08000148   Section       36  init.o(.text)
-    i.LL_GPIO_Init                           0x0800016c   Section        0  stm32f1xx_ll_gpio.o(i.LL_GPIO_Init)
-    i.LL_Init1msTick                         0x08000364   Section        0  stm32f1xx_ll_utils.o(i.LL_Init1msTick)
-    i.LL_SetSystemCoreClock                  0x08000380   Section        0  stm32f1xx_ll_utils.o(i.LL_SetSystemCoreClock)
-    i.LL_TIM_ClearFlag_UPDATE                0x0800038c   Section        0  mytimer.o(i.LL_TIM_ClearFlag_UPDATE)
-    LL_TIM_ClearFlag_UPDATE                  0x0800038d   Thumb Code     8  mytimer.o(i.LL_TIM_ClearFlag_UPDATE)
-    i.LL_TIM_Init                            0x08000394   Section        0  stm32f1xx_ll_tim.o(i.LL_TIM_Init)
-    i.LL_TIM_OC_SetMode                      0x080004a8   Section        0  voile.o(i.LL_TIM_OC_SetMode)
-    LL_TIM_OC_SetMode                        0x080004a9   Thumb Code    98  voile.o(i.LL_TIM_OC_SetMode)
-    i.SystemClock_Config                     0x08000514   Section        0  main.o(i.SystemClock_Config)
-    i.SystemInit                             0x08000604   Section        0  system_stm32f1xx.o(i.SystemInit)
-    i.TIM1_UP_IRQHandler                     0x0800065c   Section        0  mytimer.o(i.TIM1_UP_IRQHandler)
-    i.TIM2_IRQHandler                        0x08000674   Section        0  mytimer.o(i.TIM2_IRQHandler)
-    i.TIM3_IRQHandler                        0x0800068c   Section        0  mytimer.o(i.TIM3_IRQHandler)
-    i.TIM4_IRQHandler                        0x080006a4   Section        0  mytimer.o(i.TIM4_IRQHandler)
-    i.Voile_Conf                             0x080006bc   Section        0  voile.o(i.Voile_Conf)
-    i.__scatterload_copy                     0x08000758   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x08000766   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x08000768   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i.assert_failed                          0x08000776   Section        0  main.o(i.assert_failed)
-    i.main                                   0x0800077c   Section        0  main.o(i.main)
-    .constdata                               0x08000790   Section       56  voile.o(.constdata)
-    OFFSET_TAB_CCMRx                         0x08000790   Data           7  voile.o(.constdata)
-    SHIFT_TAB_OCxx                           0x08000797   Data           7  voile.o(.constdata)
-    SHIFT_TAB_ICxx                           0x0800079e   Data           7  voile.o(.constdata)
-    SHIFT_TAB_CCxP                           0x080007a5   Data           7  voile.o(.constdata)
-    SHIFT_TAB_OISx                           0x080007ac   Data           7  voile.o(.constdata)
+    .text                                    0x08000124   Section       36  init.o(.text)
+    i.Girouette_Conf                         0x08000148   Section        0  girouette.o(i.Girouette_Conf)
+    i.LL_GPIO_Init                           0x08000254   Section        0  stm32f1xx_ll_gpio.o(i.LL_GPIO_Init)
+    i.LL_Init1msTick                         0x0800044c   Section        0  stm32f1xx_ll_utils.o(i.LL_Init1msTick)
+    i.LL_SetSystemCoreClock                  0x08000468   Section        0  stm32f1xx_ll_utils.o(i.LL_SetSystemCoreClock)
+    i.LL_TIM_CC_EnableChannel                0x08000474   Section        0  girouette.o(i.LL_TIM_CC_EnableChannel)
+    LL_TIM_CC_EnableChannel                  0x08000475   Thumb Code     8  girouette.o(i.LL_TIM_CC_EnableChannel)
+    i.LL_TIM_ClearFlag_UPDATE                0x0800047c   Section        0  mytimer.o(i.LL_TIM_ClearFlag_UPDATE)
+    LL_TIM_ClearFlag_UPDATE                  0x0800047d   Thumb Code     8  mytimer.o(i.LL_TIM_ClearFlag_UPDATE)
+    i.SystemClock_Config                     0x08000484   Section        0  main.o(i.SystemClock_Config)
+    i.SystemInit                             0x08000574   Section        0  system_stm32f1xx.o(i.SystemInit)
+    i.TIM1_UP_IRQHandler                     0x080005cc   Section        0  mytimer.o(i.TIM1_UP_IRQHandler)
+    i.TIM2_IRQHandler                        0x080005e4   Section        0  mytimer.o(i.TIM2_IRQHandler)
+    i.TIM3_IRQHandler                        0x080005fc   Section        0  mytimer.o(i.TIM3_IRQHandler)
+    i.TIM4_IRQHandler                        0x08000614   Section        0  mytimer.o(i.TIM4_IRQHandler)
+    i.__scatterload_copy                     0x0800062c   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x0800063a   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x0800063c   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.assert_failed                          0x0800064a   Section        0  main.o(i.assert_failed)
+    i.main                                   0x08000650   Section        0  main.o(i.main)
     .data                                    0x20000000   Section       16  mytimer.o(.data)
     .data                                    0x20000010   Section        4  system_stm32f1xx.o(.data)
     STACK                                    0x20000018   Section     1024  startup_stm32f103xb.o(STACK)
@@ -441,29 +440,25 @@ Image Symbol Table
     USB_HP_CAN1_TX_IRQHandler                0x0800011b   Thumb Code     0  startup_stm32f103xb.o(.text)
     USB_LP_CAN1_RX0_IRQHandler               0x0800011b   Thumb Code     0  startup_stm32f103xb.o(.text)
     WWDG_IRQHandler                          0x0800011b   Thumb Code     0  startup_stm32f103xb.o(.text)
-    __aeabi_memcpy                           0x08000125   Thumb Code    36  memcpya.o(.text)
-    __aeabi_memcpy4                          0x08000125   Thumb Code     0  memcpya.o(.text)
-    __aeabi_memcpy8                          0x08000125   Thumb Code     0  memcpya.o(.text)
-    __scatterload                            0x08000149   Thumb Code    28  init.o(.text)
-    __scatterload_rt2                        0x08000149   Thumb Code     0  init.o(.text)
-    LL_GPIO_Init                             0x0800016d   Thumb Code   442  stm32f1xx_ll_gpio.o(i.LL_GPIO_Init)
-    LL_Init1msTick                           0x08000365   Thumb Code    28  stm32f1xx_ll_utils.o(i.LL_Init1msTick)
-    LL_SetSystemCoreClock                    0x08000381   Thumb Code     6  stm32f1xx_ll_utils.o(i.LL_SetSystemCoreClock)
-    LL_TIM_Init                              0x08000395   Thumb Code   228  stm32f1xx_ll_tim.o(i.LL_TIM_Init)
-    SystemClock_Config                       0x08000515   Thumb Code   226  main.o(i.SystemClock_Config)
-    SystemInit                               0x08000605   Thumb Code    70  system_stm32f1xx.o(i.SystemInit)
-    TIM1_UP_IRQHandler                       0x0800065d   Thumb Code    16  mytimer.o(i.TIM1_UP_IRQHandler)
-    TIM2_IRQHandler                          0x08000675   Thumb Code    18  mytimer.o(i.TIM2_IRQHandler)
-    TIM3_IRQHandler                          0x0800068d   Thumb Code    16  mytimer.o(i.TIM3_IRQHandler)
-    TIM4_IRQHandler                          0x080006a5   Thumb Code    16  mytimer.o(i.TIM4_IRQHandler)
-    Voile_Conf                               0x080006bd   Thumb Code   142  voile.o(i.Voile_Conf)
-    __scatterload_copy                       0x08000759   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x08000767   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x08000769   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    assert_failed                            0x08000777   Thumb Code     4  main.o(i.assert_failed)
-    main                                     0x0800077d   Thumb Code    16  main.o(i.main)
-    Region$$Table$$Base                      0x080007c8   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x080007e8   Number         0  anon$$obj.o(Region$$Table)
+    __scatterload                            0x08000125   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x08000125   Thumb Code     0  init.o(.text)
+    Girouette_Conf                           0x08000149   Thumb Code   256  girouette.o(i.Girouette_Conf)
+    LL_GPIO_Init                             0x08000255   Thumb Code   442  stm32f1xx_ll_gpio.o(i.LL_GPIO_Init)
+    LL_Init1msTick                           0x0800044d   Thumb Code    28  stm32f1xx_ll_utils.o(i.LL_Init1msTick)
+    LL_SetSystemCoreClock                    0x08000469   Thumb Code     6  stm32f1xx_ll_utils.o(i.LL_SetSystemCoreClock)
+    SystemClock_Config                       0x08000485   Thumb Code   226  main.o(i.SystemClock_Config)
+    SystemInit                               0x08000575   Thumb Code    70  system_stm32f1xx.o(i.SystemInit)
+    TIM1_UP_IRQHandler                       0x080005cd   Thumb Code    16  mytimer.o(i.TIM1_UP_IRQHandler)
+    TIM2_IRQHandler                          0x080005e5   Thumb Code    18  mytimer.o(i.TIM2_IRQHandler)
+    TIM3_IRQHandler                          0x080005fd   Thumb Code    16  mytimer.o(i.TIM3_IRQHandler)
+    TIM4_IRQHandler                          0x08000615   Thumb Code    16  mytimer.o(i.TIM4_IRQHandler)
+    __scatterload_copy                       0x0800062d   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x0800063b   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x0800063d   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    assert_failed                            0x0800064b   Thumb Code     4  main.o(i.assert_failed)
+    main                                     0x08000651   Thumb Code    16  main.o(i.main)
+    Region$$Table$$Base                      0x08000664   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08000684   Number         0  anon$$obj.o(Region$$Table)
     Ptr_ItFct_TIM1                           0x20000000   Data           4  mytimer.o(.data)
     Ptr_ItFct_TIM2                           0x20000004   Data           4  mytimer.o(.data)
     Ptr_ItFct_TIM3                           0x20000008   Data           4  mytimer.o(.data)
@@ -479,56 +474,53 @@ Memory Map of the image
 
   Image Entry point : 0x080000ed
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000007fc, Max: 0x00020000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000698, Max: 0x00020000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000007e8, Max: 0x00020000, ABSOLUTE)
-
-    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
-
-    0x08000000   0x08000000   0x000000ec   Data   RO          865    RESET               startup_stm32f103xb.o
-    0x080000ec   0x080000ec   0x00000000   Code   RO          870  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x080000ec   0x080000ec   0x00000004   Code   RO          877    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x080000f0   0x080000f0   0x00000004   Code   RO          880    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x080000f4   0x080000f4   0x00000000   Code   RO          882    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x080000f4   0x080000f4   0x00000000   Code   RO          884    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x080000f4   0x080000f4   0x00000008   Code   RO          885    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x080000fc   0x080000fc   0x00000000   Code   RO          887    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x080000fc   0x080000fc   0x00000000   Code   RO          889    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x080000fc   0x080000fc   0x00000004   Code   RO          878    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x08000100   0x08000100   0x00000024   Code   RO          866    .text               startup_stm32f103xb.o
-    0x08000124   0x08000124   0x00000024   Code   RO          873    .text               mc_w.l(memcpya.o)
-    0x08000148   0x08000148   0x00000024   Code   RO          891    .text               mc_w.l(init.o)
-    0x0800016c   0x0800016c   0x000001f8   Code   RO          706    i.LL_GPIO_Init      stm32f1xx_ll_gpio.o
-    0x08000364   0x08000364   0x0000001c   Code   RO          447    i.LL_Init1msTick    stm32f1xx_ll_utils.o
-    0x08000380   0x08000380   0x0000000c   Code   RO          454    i.LL_SetSystemCoreClock  stm32f1xx_ll_utils.o
-    0x0800038c   0x0800038c   0x00000008   Code   RO          253    i.LL_TIM_ClearFlag_UPDATE  mytimer.o
-    0x08000394   0x08000394   0x00000114   Code   RO          559    i.LL_TIM_Init       stm32f1xx_ll_tim.o
-    0x080004a8   0x080004a8   0x0000006c   Code   RO          138    i.LL_TIM_OC_SetMode  voile.o
-    0x08000514   0x08000514   0x000000f0   Code   RO           81    i.SystemClock_Config  main.o
-    0x08000604   0x08000604   0x00000058   Code   RO          830    i.SystemInit        system_stm32f1xx.o
-    0x0800065c   0x0800065c   0x00000018   Code   RO          262    i.TIM1_UP_IRQHandler  mytimer.o
-    0x08000674   0x08000674   0x00000018   Code   RO          263    i.TIM2_IRQHandler   mytimer.o
-    0x0800068c   0x0800068c   0x00000018   Code   RO          264    i.TIM3_IRQHandler   mytimer.o
-    0x080006a4   0x080006a4   0x00000018   Code   RO          265    i.TIM4_IRQHandler   mytimer.o
-    0x080006bc   0x080006bc   0x0000009c   Code   RO          139    i.Voile_Conf        voile.o
-    0x08000758   0x08000758   0x0000000e   Code   RO          895    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08000766   0x08000766   0x00000002   Code   RO          896    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08000768   0x08000768   0x0000000e   Code   RO          897    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x08000776   0x08000776   0x00000004   Code   RO           82    i.assert_failed     main.o
-    0x0800077a   0x0800077a   0x00000002   PAD
-    0x0800077c   0x0800077c   0x00000014   Code   RO           83    i.main              main.o
-    0x08000790   0x08000790   0x00000038   Data   RO          140    .constdata          voile.o
-    0x080007c8   0x080007c8   0x00000020   Data   RO          893    Region$$Table       anon$$obj.o
-
-
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x080007e8, Size: 0x00000418, Max: 0x00005000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000684, Max: 0x00020000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x080007e8   0x00000010   Data   RW          267    .data               mytimer.o
-    0x20000010   0x080007f8   0x00000004   Data   RW          832    .data               system_stm32f1xx.o
-    0x20000014   0x080007fc   0x00000004   PAD
-    0x20000018        -       0x00000400   Zero   RW          863    STACK               startup_stm32f103xb.o
+    0x08000000   0x08000000   0x000000ec   Data   RO          888    RESET               startup_stm32f103xb.o
+    0x080000ec   0x080000ec   0x00000000   Code   RO          893  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080000ec   0x080000ec   0x00000004   Code   RO          900    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080000f0   0x080000f0   0x00000004   Code   RO          903    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO          905    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO          907    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080000f4   0x080000f4   0x00000008   Code   RO          908    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080000fc   0x080000fc   0x00000000   Code   RO          910    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x080000fc   0x080000fc   0x00000000   Code   RO          912    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x080000fc   0x080000fc   0x00000004   Code   RO          901    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000100   0x08000100   0x00000024   Code   RO          889    .text               startup_stm32f103xb.o
+    0x08000124   0x08000124   0x00000024   Code   RO          914    .text               mc_w.l(init.o)
+    0x08000148   0x08000148   0x0000010c   Code   RO            4    i.Girouette_Conf    girouette.o
+    0x08000254   0x08000254   0x000001f8   Code   RO          729    i.LL_GPIO_Init      stm32f1xx_ll_gpio.o
+    0x0800044c   0x0800044c   0x0000001c   Code   RO          470    i.LL_Init1msTick    stm32f1xx_ll_utils.o
+    0x08000468   0x08000468   0x0000000c   Code   RO          477    i.LL_SetSystemCoreClock  stm32f1xx_ll_utils.o
+    0x08000474   0x08000474   0x00000008   Code   RO            8    i.LL_TIM_CC_EnableChannel  girouette.o
+    0x0800047c   0x0800047c   0x00000008   Code   RO          276    i.LL_TIM_ClearFlag_UPDATE  mytimer.o
+    0x08000484   0x08000484   0x000000f0   Code   RO          103    i.SystemClock_Config  main.o
+    0x08000574   0x08000574   0x00000058   Code   RO          853    i.SystemInit        system_stm32f1xx.o
+    0x080005cc   0x080005cc   0x00000018   Code   RO          285    i.TIM1_UP_IRQHandler  mytimer.o
+    0x080005e4   0x080005e4   0x00000018   Code   RO          286    i.TIM2_IRQHandler   mytimer.o
+    0x080005fc   0x080005fc   0x00000018   Code   RO          287    i.TIM3_IRQHandler   mytimer.o
+    0x08000614   0x08000614   0x00000018   Code   RO          288    i.TIM4_IRQHandler   mytimer.o
+    0x0800062c   0x0800062c   0x0000000e   Code   RO          918    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0800063a   0x0800063a   0x00000002   Code   RO          919    i.__scatterload_null  mc_w.l(handlers.o)
+    0x0800063c   0x0800063c   0x0000000e   Code   RO          920    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0800064a   0x0800064a   0x00000004   Code   RO          104    i.assert_failed     main.o
+    0x0800064e   0x0800064e   0x00000002   PAD
+    0x08000650   0x08000650   0x00000014   Code   RO          105    i.main              main.o
+    0x08000664   0x08000664   0x00000020   Data   RO          916    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08000684, Size: 0x00000418, Max: 0x00005000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x08000684   0x00000010   Data   RW          290    .data               mytimer.o
+    0x20000010   0x08000694   0x00000004   Data   RW          855    .data               system_stm32f1xx.o
+    0x20000014   0x08000698   0x00000004   PAD
+    0x20000018        -       0x00000400   Zero   RW          886    STACK               startup_stm32f103xb.o
 
 
 ==============================================================================
@@ -538,18 +530,16 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-         0          0          0          0          0     341368   girouette.o
-       264         18          0          0          0      22956   main.o
+       276         12          0          0          0     378365   girouette.o
+       264         18          0          0          0      14008   main.o
        104         30          0         16          0      26953   mytimer.o
         36          8        236          0       1024        752   startup_stm32f103xb.o
        504         62          0          0          0      10327   stm32f1xx_ll_gpio.o
-       276         48          0          0          0      28910   stm32f1xx_ll_tim.o
         40          6          0          0          0       2013   stm32f1xx_ll_utils.o
         88         18          0          4          0       1087   system_stm32f1xx.o
-       264         24         56          0          0      28497   voile.o
 
     ----------------------------------------------------------------------
-      1578        214        324         20       1028     462863   Object Totals
+      1314        154        268         20       1028     433505   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          2          0          0          0          4          0   (incl. Padding)
 
@@ -567,20 +557,19 @@ Image component sizes
          8          4          0          0          0          0   entry9a.o
         30          0          0          0          0          0   handlers.o
         36          8          0          0          0         68   init.o
-        36          0          0          0          0         68   memcpya.o
 
     ----------------------------------------------------------------------
-       122         16          0          0          0        136   Library Totals
+        86         16          0          0          0         68   Library Totals
          0          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
 
-       122         16          0          0          0        136   mc_w.l
+        86         16          0          0          0         68   mc_w.l
 
     ----------------------------------------------------------------------
-       122         16          0          0          0        136   Library Totals
+        86         16          0          0          0         68   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -589,15 +578,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      1700        230        324         20       1028     462475   Grand Totals
-      1700        230        324         20       1028     462475   ELF Image Totals
-      1700        230        324         20          0          0   ROM Totals
+      1400        170        268         20       1028     433101   Grand Totals
+      1400        170        268         20       1028     433101   ELF Image Totals
+      1400        170        268         20          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 2024 (   1.98kB)
+    Total RO  Size (Code + RO Data)                 1668 (   1.63kB)
     Total RW  Size (RW Data + ZI Data)              1048 (   1.02kB)
-    Total ROM Size (Code + RO Data + RW Data)       2044 (   2.00kB)
+    Total ROM Size (Code + RO Data + RW Data)       1688 (   1.65kB)
 
 ==============================================================================
 
