@@ -387,6 +387,11 @@
               <FilePath>.\girouette.c</FilePath>
             </File>
             <File>
+              <FileName>voile.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\voile.h</FilePath>
+            </File>
+            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/main.c</FilePath>
@@ -396,6 +401,8 @@
               <FileType>1</FileType>
               <FilePath>.\voile.c</FilePath>
             </File>
+<<<<<<< HEAD
+=======
             <File>
               <FileName>voile.h</FileName>
               <FileType>5</FileType>
@@ -411,6 +418,7 @@
               <FileType>5</FileType>
               <FilePath>.\moteurcc.h</FilePath>
             </File>
+>>>>>>> 78ed96a8a902eac3ef499f1e00bd5cc511addd0b
           </Files>
         </Group>
         <Group>
@@ -879,6 +887,11 @@
               <FilePath>.\girouette.c</FilePath>
             </File>
             <File>
+              <FileName>voile.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\voile.h</FilePath>
+            </File>
+            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/main.c</FilePath>
@@ -888,6 +901,8 @@
               <FileType>1</FileType>
               <FilePath>.\voile.c</FilePath>
             </File>
+<<<<<<< HEAD
+=======
             <File>
               <FileName>voile.h</FileName>
               <FileType>5</FileType>
@@ -903,6 +918,7 @@
               <FileType>5</FileType>
               <FilePath>.\moteurcc.h</FilePath>
             </File>
+>>>>>>> 78ed96a8a902eac3ef499f1e00bd5cc511addd0b
           </Files>
         </Group>
         <Group>

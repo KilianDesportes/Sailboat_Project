@@ -21,9 +21,12 @@
 #include "stm32f1xx_ll_system.h" // utile dans la fonction SystemClock_Config
 #include "stm32f1xx_ll_gpio.h"
 #include "stdlib.h"
-
 #include "Chrono.h"
+<<<<<<< HEAD
 #include "moteurcc.h"
+=======
+#include "girouette.h"
+>>>>>>> 14e66620b2400046cd7cdf5070f8bd7fe4873c26
 
 void  SystemClock_Config(void);
 
@@ -39,7 +42,12 @@ Time * time_read;
 int main(void)
 {
   SystemClock_Config();
+<<<<<<< HEAD
 	MoteurCC_Congif(TIM2,750);
+=======
+	Girouette_Conf(TIM3);
+
+>>>>>>> 14e66620b2400046cd7cdf5070f8bd7fe4873c26
   //Voile_Conf(TIM1);
 }
 
