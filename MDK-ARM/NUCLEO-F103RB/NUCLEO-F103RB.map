@@ -171,9 +171,17 @@ Removing Unused input sections from the image.
     Removing voile.o(.rev16_text), (4 bytes).
     Removing voile.o(.revsh_text), (4 bytes).
     Removing voile.o(.rrx_text), (6 bytes).
+<<<<<<< HEAD
     Removing voile.o(i.LL_TIM_OC_SetMode), (108 bytes).
     Removing voile.o(i.Voile_Conf), (156 bytes).
     Removing voile.o(.constdata), (56 bytes).
+=======
+    Removing moteurcc.o(.rev16_text), (4 bytes).
+    Removing moteurcc.o(.revsh_text), (4 bytes).
+    Removing moteurcc.o(.rrx_text), (6 bytes).
+    Removing moteurcc.o(i.MoteurCC_Congif), (20 bytes).
+    Removing moteurcc.o(.constdata), (35 bytes).
+>>>>>>> 78ed96a8a902eac3ef499f1e00bd5cc511addd0b
     Removing chrono.o(.rev16_text), (4 bytes).
     Removing chrono.o(.revsh_text), (4 bytes).
     Removing chrono.o(.rrx_text), (6 bytes).
@@ -281,7 +289,11 @@ Removing Unused input sections from the image.
     Removing system_stm32f1xx.o(.constdata), (24 bytes).
     Removing startup_stm32f103xb.o(HEAP), (512 bytes).
 
+<<<<<<< HEAD
 124 unused section(s) (total 11116 bytes) removed from the image.
+=======
+124 unused section(s) (total 10521 bytes) removed from the image.
+>>>>>>> 78ed96a8a902eac3ef499f1e00bd5cc511addd0b
 
 ==============================================================================
 
@@ -294,6 +306,13 @@ Image Symbol Table
     ../Src/main.c                            0x00000000   Number         0  main.o ABSOLUTE
     ../Src/system_stm32f1xx.c                0x00000000   Number         0  system_stm32f1xx.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+<<<<<<< HEAD
+=======
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+>>>>>>> 78ed96a8a902eac3ef499f1e00bd5cc511addd0b
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
@@ -302,10 +321,16 @@ Image Symbol Table
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+<<<<<<< HEAD
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+=======
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+>>>>>>> 78ed96a8a902eac3ef499f1e00bd5cc511addd0b
     ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
     ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
     ..\LLDrivers\src\stm32f1xx_ll_gpio.c     0x00000000   Number         0  stm32f1xx_ll_gpio.o ABSOLUTE
@@ -329,6 +354,8 @@ Image Symbol Table
     girouette.c                              0x00000000   Number         0  girouette.o ABSOLUTE
     handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
     init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    moteurcc.c                               0x00000000   Number         0  moteurcc.o ABSOLUTE
+    moteurcc.c                               0x00000000   Number         0  moteurcc.o ABSOLUTE
     startup_stm32f103xb.s                    0x00000000   Number         0  startup_stm32f103xb.o ABSOLUTE
     voile.c                                  0x00000000   Number         0  voile.o ABSOLUTE
     voile.c                                  0x00000000   Number         0  voile.o ABSOLUTE
@@ -480,6 +507,7 @@ Memory Map of the image
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
+<<<<<<< HEAD
     0x08000000   0x08000000   0x000000ec   Data   RO          888    RESET               startup_stm32f103xb.o
     0x080000ec   0x080000ec   0x00000000   Code   RO          893  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
     0x080000ec   0x080000ec   0x00000004   Code   RO          900    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
@@ -521,6 +549,52 @@ Memory Map of the image
     0x20000010   0x08000694   0x00000004   Data   RW          855    .data               system_stm32f1xx.o
     0x20000014   0x08000698   0x00000004   PAD
     0x20000018        -       0x00000400   Zero   RW          886    STACK               startup_stm32f103xb.o
+=======
+    0x08000000   0x08000000   0x000000ec   Data   RO          926    RESET               startup_stm32f103xb.o
+    0x080000ec   0x080000ec   0x00000000   Code   RO          931  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080000ec   0x080000ec   0x00000004   Code   RO          938    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080000f0   0x080000f0   0x00000004   Code   RO          941    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO          943    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO          945    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080000f4   0x080000f4   0x00000008   Code   RO          946    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080000fc   0x080000fc   0x00000000   Code   RO          948    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x080000fc   0x080000fc   0x00000000   Code   RO          950    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x080000fc   0x080000fc   0x00000004   Code   RO          939    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000100   0x08000100   0x00000024   Code   RO          927    .text               startup_stm32f103xb.o
+    0x08000124   0x08000124   0x00000024   Code   RO          934    .text               mc_w.l(memcpya.o)
+    0x08000148   0x08000148   0x00000024   Code   RO          952    .text               mc_w.l(init.o)
+    0x0800016c   0x0800016c   0x000001f8   Code   RO          767    i.LL_GPIO_Init      stm32f1xx_ll_gpio.o
+    0x08000364   0x08000364   0x0000001c   Code   RO          508    i.LL_Init1msTick    stm32f1xx_ll_utils.o
+    0x08000380   0x08000380   0x0000000c   Code   RO          515    i.LL_SetSystemCoreClock  stm32f1xx_ll_utils.o
+    0x0800038c   0x0800038c   0x00000008   Code   RO          314    i.LL_TIM_ClearFlag_UPDATE  mytimer.o
+    0x08000394   0x08000394   0x00000114   Code   RO          620    i.LL_TIM_Init       stm32f1xx_ll_tim.o
+    0x080004a8   0x080004a8   0x0000006c   Code   RO          138    i.LL_TIM_OC_SetMode  voile.o
+    0x08000514   0x08000514   0x000000f0   Code   RO           81    i.SystemClock_Config  main.o
+    0x08000604   0x08000604   0x00000058   Code   RO          891    i.SystemInit        system_stm32f1xx.o
+    0x0800065c   0x0800065c   0x00000018   Code   RO          323    i.TIM1_UP_IRQHandler  mytimer.o
+    0x08000674   0x08000674   0x00000018   Code   RO          324    i.TIM2_IRQHandler   mytimer.o
+    0x0800068c   0x0800068c   0x00000018   Code   RO          325    i.TIM3_IRQHandler   mytimer.o
+    0x080006a4   0x080006a4   0x00000018   Code   RO          326    i.TIM4_IRQHandler   mytimer.o
+    0x080006bc   0x080006bc   0x0000009c   Code   RO          139    i.Voile_Conf        voile.o
+    0x08000758   0x08000758   0x0000000e   Code   RO          956    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08000766   0x08000766   0x00000002   Code   RO          957    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08000768   0x08000768   0x0000000e   Code   RO          958    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08000776   0x08000776   0x00000004   Code   RO           82    i.assert_failed     main.o
+    0x0800077a   0x0800077a   0x00000002   PAD
+    0x0800077c   0x0800077c   0x00000014   Code   RO           83    i.main              main.o
+    0x08000790   0x08000790   0x00000038   Data   RO          140    .constdata          voile.o
+    0x080007c8   0x080007c8   0x00000020   Data   RO          954    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x080007e8, Size: 0x00000418, Max: 0x00005000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x080007e8   0x00000010   Data   RW          328    .data               mytimer.o
+    0x20000010   0x080007f8   0x00000004   Data   RW          893    .data               system_stm32f1xx.o
+    0x20000014   0x080007fc   0x00000004   PAD
+    0x20000018        -       0x00000400   Zero   RW          924    STACK               startup_stm32f103xb.o
+>>>>>>> 78ed96a8a902eac3ef499f1e00bd5cc511addd0b
 
 
 ==============================================================================

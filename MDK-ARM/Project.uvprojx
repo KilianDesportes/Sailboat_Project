@@ -401,6 +401,24 @@
               <FileType>1</FileType>
               <FilePath>.\voile.c</FilePath>
             </File>
+<<<<<<< HEAD
+=======
+            <File>
+              <FileName>voile.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\voile.h</FilePath>
+            </File>
+            <File>
+              <FileName>moteurcc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\moteurcc.c</FilePath>
+            </File>
+            <File>
+              <FileName>moteurcc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\moteurcc.h</FilePath>
+            </File>
+>>>>>>> 78ed96a8a902eac3ef499f1e00bd5cc511addd0b
           </Files>
         </Group>
         <Group>
@@ -883,6 +901,24 @@
               <FileType>1</FileType>
               <FilePath>.\voile.c</FilePath>
             </File>
+<<<<<<< HEAD
+=======
+            <File>
+              <FileName>voile.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\voile.h</FilePath>
+            </File>
+            <File>
+              <FileName>moteurcc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\moteurcc.c</FilePath>
+            </File>
+            <File>
+              <FileName>moteurcc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\moteurcc.h</FilePath>
+            </File>
+>>>>>>> 78ed96a8a902eac3ef499f1e00bd5cc511addd0b
           </Files>
         </Group>
         <Group>
