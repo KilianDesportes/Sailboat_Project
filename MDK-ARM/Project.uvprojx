@@ -401,6 +401,16 @@
               <FileType>5</FileType>
               <FilePath>.\voile.h</FilePath>
             </File>
+            <File>
+              <FileName>moteurcc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\moteurcc.c</FilePath>
+            </File>
+            <File>
+              <FileName>moteurcc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\moteurcc.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -882,6 +892,16 @@
               <FileName>voile.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\voile.h</FilePath>
+            </File>
+            <File>
+              <FileName>moteurcc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\moteurcc.c</FilePath>
+            </File>
+            <File>
+              <FileName>moteurcc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\moteurcc.h</FilePath>
             </File>
           </Files>
         </Group>
