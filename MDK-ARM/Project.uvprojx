@@ -137,7 +137,7 @@
             <DriverSelection>4107</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
-          <Flash2>STLink\ST-LINKIII-KEIL_SWO.dll</Flash2>
+          <Flash2>BIN\UL2CM3.DLL</Flash2>
           <Flash3></Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
@@ -401,13 +401,6 @@
               <FileType>1</FileType>
               <FilePath>.\voile.c</FilePath>
             </File>
-<<<<<<< HEAD
-=======
-            <File>
-              <FileName>voile.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\voile.h</FilePath>
-            </File>
             <File>
               <FileName>moteurcc.c</FileName>
               <FileType>1</FileType>
@@ -418,7 +411,6 @@
               <FileType>5</FileType>
               <FilePath>.\moteurcc.h</FilePath>
             </File>
->>>>>>> 78ed96a8a902eac3ef499f1e00bd5cc511addd0b
           </Files>
         </Group>
         <Group>
@@ -901,13 +893,6 @@
               <FileType>1</FileType>
               <FilePath>.\voile.c</FilePath>
             </File>
-<<<<<<< HEAD
-=======
-            <File>
-              <FileName>voile.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\voile.h</FilePath>
-            </File>
             <File>
               <FileName>moteurcc.c</FileName>
               <FileType>1</FileType>
@@ -918,7 +903,6 @@
               <FileType>5</FileType>
               <FilePath>.\moteurcc.h</FilePath>
             </File>
->>>>>>> 78ed96a8a902eac3ef499f1e00bd5cc511addd0b
           </Files>
         </Group>
         <Group>

@@ -4,7 +4,7 @@
 
 #include "stdlib.h"
 
-/*void Girouette_Conf(TIM_TypeDef * Timer)
+void Girouette_Conf(TIM_TypeDef * Timer)
 {
 	RCC->APB2ENR |= RCC_APB2ENR_IOPAEN;
 	
@@ -62,6 +62,6 @@ void Girouette_Stop(void)
 
 void Girouette_Reset(void)
 {
-}*/
+}
 
 
