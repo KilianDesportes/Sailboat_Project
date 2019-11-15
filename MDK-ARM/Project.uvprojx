@@ -387,11 +387,6 @@
               <FilePath>.\girouette.c</FilePath>
             </File>
             <File>
-              <FileName>voile.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\voile.h</FilePath>
-            </File>
-            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/main.c</FilePath>
@@ -405,11 +400,6 @@
               <FileName>moteurcc.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\moteurcc.c</FilePath>
-            </File>
-            <File>
-              <FileName>moteurcc.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\moteurcc.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -629,7 +619,7 @@
             <DriverSelection>4107</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
-          <Flash2>STLink\ST-LINKIII-KEIL_SWO.dll</Flash2>
+          <Flash2>BIN\UL2CM3.DLL</Flash2>
           <Flash3></Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
@@ -879,11 +869,6 @@
               <FilePath>.\girouette.c</FilePath>
             </File>
             <File>
-              <FileName>voile.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\voile.h</FilePath>
-            </File>
-            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/main.c</FilePath>
@@ -897,11 +882,6 @@
               <FileName>moteurcc.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\moteurcc.c</FilePath>
-            </File>
-            <File>
-              <FileName>moteurcc.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\moteurcc.h</FilePath>
             </File>
           </Files>
         </Group>

@@ -3,23 +3,11 @@
 <title>Static Call Graph - [NUCLEO-F103RB\NUCLEO-F103RB.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image NUCLEO-F103RB\NUCLEO-F103RB.axf</H1><HR>
-<<<<<<< HEAD
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Nov 04 16:58:12 2019
-<BR><P>
-<H3>Maximum Stack Usage =        112 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
-Call chain for Maximum Stack Depth:</H3>
-main &rArr; MoteurCC_Congif &rArr; LL_GPIO_Init
-=======
-<<<<<<< HEAD
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Nov 04 17:08:34 2019
-=======
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Nov 04 15:05:09 2019
->>>>>>> 78ed96a8a902eac3ef499f1e00bd5cc511addd0b
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Fri Nov 15 12:53:58 2019
 <BR><P>
 <H3>Maximum Stack Usage =        104 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 main &rArr; Girouette_Conf &rArr; LL_GPIO_Init
->>>>>>> 14e66620b2400046cd7cdf5070f8bd7fe4873c26
 <P>
 <H3>
 Mutually Recursive functions
@@ -309,17 +297,6 @@ Global Symbols
 <P><STRONG><a name="[a]"></a>WWDG_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f103xb.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f103xb.o(RESET)
 </UL>
-<<<<<<< HEAD
-<P><STRONG><a name="[4b]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
-
-<P><STRONG><a name="[3f]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MoteurCC_Congif
-</UL>
-
-<P><STRONG><a name="[4c]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
-
-=======
->>>>>>> 14e66620b2400046cd7cdf5070f8bd7fe4873c26
 <P><STRONG><a name="[39]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
 </UL>
@@ -334,17 +311,6 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_Init
 <LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_TIM_CC_EnableChannel
 </UL>
-<<<<<<< HEAD
-<BR>[Called By]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MoteurCC_Congif
-</UL>
-
-<P><STRONG><a name="[42]"></a>LL_Init1msTick</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, stm32f1xx_ll_utils.o(i.LL_Init1msTick))
-<BR><BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
-</UL>
-
-<P><STRONG><a name="[43]"></a>LL_SetSystemCoreClock</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f1xx_ll_utils.o(i.LL_SetSystemCoreClock))
-<BR><BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
-=======
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -352,7 +318,6 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = LL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;assert_failed
->>>>>>> 14e66620b2400046cd7cdf5070f8bd7fe4873c26
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Girouette_Conf
 </UL>
@@ -360,27 +325,6 @@ Global Symbols
 <P><STRONG><a name="[40]"></a>LL_Init1msTick</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, stm32f1xx_ll_utils.o(i.LL_Init1msTick))
 <BR><BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
-<<<<<<< HEAD
-<BR>[Called By]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MoteurCC_Congif
-</UL>
-
-<P><STRONG><a name="[3e]"></a>MoteurCC_Congif</STRONG> (Thumb, 152 bytes, Stack size 80 bytes, moteurcc.o(i.MoteurCC_Congif))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = MoteurCC_Congif &rArr; LL_GPIO_Init
-</UL>
-<BR>[Calls]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_TIM_OC_SetMode
-<LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_TIM_Init
-<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_Init
-<LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
-</UL>
-<BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[41]"></a>SystemClock_Config</STRONG> (Thumb, 226 bytes, Stack size 8 bytes, main.o(i.SystemClock_Config))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SystemClock_Config
-</UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_SetSystemCoreClock
-<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_Init1msTick
-=======
 
 <P><STRONG><a name="[41]"></a>LL_SetSystemCoreClock</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f1xx_ll_utils.o(i.LL_SetSystemCoreClock))
 <BR><BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
@@ -391,7 +335,6 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_SetSystemCoreClock
 <LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_Init1msTick
->>>>>>> 14e66620b2400046cd7cdf5070f8bd7fe4873c26
 </UL>
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -402,46 +345,27 @@ Global Symbols
 <P><STRONG><a name="[23]"></a>TIM1_UP_IRQHandler</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, mytimer.o(i.TIM1_UP_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TIM1_UP_IRQHandler
 </UL>
-<<<<<<< HEAD
-<BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_TIM_ClearFlag_UPDATE
-=======
 <BR>[Calls]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_TIM_ClearFlag_UPDATE
->>>>>>> 14e66620b2400046cd7cdf5070f8bd7fe4873c26
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f103xb.o(RESET)
 </UL>
 <P><STRONG><a name="[26]"></a>TIM2_IRQHandler</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, mytimer.o(i.TIM2_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TIM2_IRQHandler
 </UL>
-<<<<<<< HEAD
-<BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_TIM_ClearFlag_UPDATE
-=======
 <BR>[Calls]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_TIM_ClearFlag_UPDATE
->>>>>>> 14e66620b2400046cd7cdf5070f8bd7fe4873c26
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f103xb.o(RESET)
 </UL>
 <P><STRONG><a name="[27]"></a>TIM3_IRQHandler</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, mytimer.o(i.TIM3_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TIM3_IRQHandler
 </UL>
-<<<<<<< HEAD
-<BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_TIM_ClearFlag_UPDATE
-=======
 <BR>[Calls]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_TIM_ClearFlag_UPDATE
->>>>>>> 14e66620b2400046cd7cdf5070f8bd7fe4873c26
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f103xb.o(RESET)
 </UL>
 <P><STRONG><a name="[28]"></a>TIM4_IRQHandler</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, mytimer.o(i.TIM4_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TIM4_IRQHandler
 </UL>
-<<<<<<< HEAD
-<BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_TIM_ClearFlag_UPDATE
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f103xb.o(RESET)
-</UL>
-<P><STRONG><a name="[4e]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
-=======
 <BR>[Calls]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_TIM_ClearFlag_UPDATE
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f103xb.o(RESET)
@@ -449,7 +373,6 @@ Global Symbols
 <P><STRONG><a name="[4a]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
 <P><STRONG><a name="[4b]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
->>>>>>> 14e66620b2400046cd7cdf5070f8bd7fe4873c26
 
 <P><STRONG><a name="[4c]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
@@ -457,40 +380,22 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_GPIO_Init
 </UL>
 
-<<<<<<< HEAD
-<P><STRONG><a name="[35]"></a>main</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = main &rArr; MoteurCC_Congif &rArr; LL_GPIO_Init
-</UL>
-<BR>[Calls]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MoteurCC_Congif
-<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
-=======
 <P><STRONG><a name="[35]"></a>main</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = main &rArr; Girouette_Conf &rArr; LL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 <LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Girouette_Conf
->>>>>>> 14e66620b2400046cd7cdf5070f8bd7fe4873c26
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL><P>
 <H3>
 Local Symbols
 </H3>
-<<<<<<< HEAD
-<P><STRONG><a name="[40]"></a>LL_TIM_OC_SetMode</STRONG> (Thumb, 98 bytes, Stack size 20 bytes, moteurcc.o(i.LL_TIM_OC_SetMode))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = LL_TIM_OC_SetMode
-</UL>
-<BR>[Called By]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MoteurCC_Congif
-</UL>
-
-<P><STRONG><a name="[44]"></a>LL_TIM_ClearFlag_UPDATE</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, mytimer.o(i.LL_TIM_ClearFlag_UPDATE))
-=======
 <P><STRONG><a name="[3d]"></a>LL_TIM_CC_EnableChannel</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, girouette.o(i.LL_TIM_CC_EnableChannel))
 <BR><BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Girouette_Conf
 </UL>
 
 <P><STRONG><a name="[42]"></a>LL_TIM_ClearFlag_UPDATE</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, mytimer.o(i.LL_TIM_ClearFlag_UPDATE))
->>>>>>> 14e66620b2400046cd7cdf5070f8bd7fe4873c26
 <BR><BR>[Called By]<UL><LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM4_IRQHandler
 <LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM3_IRQHandler
 <LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM2_IRQHandler
