@@ -4,6 +4,8 @@
 
 #include "stdlib.h"
 
+int i = 0;
+
 void Girouette_Conf(TIM_TypeDef * Timer)
 {
 	RCC->APB2ENR |= RCC_APB2ENR_IOPAEN;
@@ -17,13 +19,15 @@ void Girouette_Conf(TIM_TypeDef * Timer)
 	LL_GPIO_InitTypeDef GPIO_Init_6;
 	GPIO_Init_6.Pin = LL_GPIO_PIN_6;
 	GPIO_Init_6.Mode = LL_GPIO_MODE_INPUT;
-	GPIO_Init_6.Pull = LL_GPIO_PULL_DOWN;
+		GPIO_Init_6.Pull = LL_GPIO_PULL_DOWN;
+
 	LL_GPIO_Init( GPIOA, &GPIO_Init_6 );
 
 	LL_GPIO_InitTypeDef GPIO_Init_7;
 	GPIO_Init_7.Pin = LL_GPIO_PIN_7;
 	GPIO_Init_7.Mode = LL_GPIO_MODE_INPUT;
-	GPIO_Init_7.Pull = LL_GPIO_PULL_DOWN;
+		GPIO_Init_7.Pull = LL_GPIO_PULL_DOWN;
+
 	LL_GPIO_Init( GPIOA, &GPIO_Init_7 );
 	
 	LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_TIM3);
@@ -50,18 +54,12 @@ void Girouette_Conf(TIM_TypeDef * Timer)
 	LL_TIM_EnableCounter(Timer);
 }
 
-
-
-void Girouette_Start(void)
-{
-}
-
-void Girouette_Stop(void)
-{
-}
-
 void Girouette_Reset(void)
 {
+	while(!LL_GPIO_IsInputPinSet(GPIOA, LL_GPIO_PIN_5)){
+	}
+	TIM3->CNT = 0;		
+
 }
 
 

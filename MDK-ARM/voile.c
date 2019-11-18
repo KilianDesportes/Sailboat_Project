@@ -29,8 +29,8 @@ void Voile_Conf(TIM_TypeDef * Timer)
 	LL_TIM_CC_EnableChannel(Timer,LL_TIM_CHANNEL_CH1);
 	
 	LL_TIM_OC_SetMode(Timer,LL_TIM_CHANNEL_CH1,LL_TIM_OCMODE_PWM1);
-	
-	LL_TIM_OC_SetCompareCH1(Timer,ARR/2);
+		
+	LL_TIM_OC_SetCompareCH1(TIM1,ARR/2);
 		
 	LL_TIM_EnableAllOutputs(Timer);
 	

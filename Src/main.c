@@ -22,6 +22,7 @@
 #include "stm32f1xx_ll_gpio.h"
 #include "stdlib.h"
 #include "girouette.h"
+#include "voile.h"
 #include "Chrono.h"
 
 void  SystemClock_Config(void);
@@ -34,11 +35,34 @@ void  SystemClock_Config(void);
   * @retval None
   */
 Time * time_read;
+int CNT ;
 
 int main(void)
 {
   SystemClock_Config();
+	Voile_Conf(TIM1);
   Girouette_Conf(TIM3);
+	Girouette_Reset();
+	while (1)
+	{
+		
+		CNT= TIM3->CNT;
+		
+		CNT = CNT / 4;
+		
+		if(CNT > 0xB4){
+			CNT = CNT-(2*(CNT-0xB4));
+		}
+		float tpsMontantMs = 2.0;
+		if(CNT > 0x2D){
+			tpsMontantMs = CNT/(-135.0) + 7.0/3.0;
+		}
+		
+		float divTimer = -10.0*tpsMontantMs + 30.0;
+		
+		LL_TIM_OC_SetCompareCH1(TIM1,9999.0/divTimer);
+		
+	}
 }
 
 
@@ -70,7 +94,7 @@ void SystemClock_Config(void)
   /* Enable HSE oscillator */
 	// ********* Commenter la ligne ci-dessous pour MCBSTM32 *****************
 	// ********* Conserver la ligne si Nucléo*********************************
-  LL_RCC_HSE_EnableBypass();
+ // LL_RCC_HSE_EnableBypass();
   LL_RCC_HSE_Enable();
   while(LL_RCC_HSE_IsReady() != 1)
   {

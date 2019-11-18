@@ -5,9 +5,4 @@
 #include "stm32f1xx_ll_tim.h" 
 
 void Girouette_Conf(TIM_TypeDef * Timer);
-
-void Girouette_Start(void);
-
-void Girouette_Stop(void);
-
 void Girouette_Reset(void);
