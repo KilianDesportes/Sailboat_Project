@@ -34,7 +34,7 @@ void  SystemClock_Config(void);
   * @param  None
   * @retval None
   */
-Time * time_read;
+
 int CNT ;
 
 int main(void)
@@ -43,26 +43,14 @@ int main(void)
 	Voile_Conf(TIM1);
   Girouette_Conf(TIM3);
 	Girouette_Reset();
+	
 	while (1)
 	{
 		
-		CNT= TIM3->CNT;
-		
-		CNT = CNT / 4;
-		
-		if(CNT > 0xB4){
-			CNT = CNT-(2*(CNT-0xB4));
-		}
-		float tpsMontantMs = 2.0;
-		if(CNT > 0x2D){
-			tpsMontantMs = CNT/(-135.0) + 7.0/3.0;
-		}
-		
-		float divTimer = -10.0*tpsMontantMs + 30.0;
-		
-		LL_TIM_OC_SetCompareCH1(TIM1,9999.0/divTimer);
+		Voile_setAngle();
 		
 	}
+	
 }
 
 

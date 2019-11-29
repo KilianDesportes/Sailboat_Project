@@ -1,5 +1,7 @@
 #include "Voile.h"
 
+int CNT ;
+
 void Voile_Conf(TIM_TypeDef * Timer)
 {
 	
@@ -36,6 +38,25 @@ void Voile_Conf(TIM_TypeDef * Timer)
 	
 	LL_TIM_EnableCounter(Timer);
 
+}
+
+float Voile_setAngle(){
+	
+	CNT= TIM3->CNT;
+		
+	CNT = CNT / 4;
+	
+	if(CNT > 0xB4){
+		CNT = CNT-(2*(CNT-0xB4));
+	}
+	float tpsMontantMs = 2.0;
+	if(CNT > 0x2D){
+		tpsMontantMs = CNT/(-135.0) + 7.0/3.0;
+	}
+	
+	float divTimer = -10.0*tpsMontantMs + 30.0;
+	
+	LL_TIM_OC_SetCompareCH1(TIM1,9999.0/divTimer);
 }
 
 

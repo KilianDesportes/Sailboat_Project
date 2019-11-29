@@ -8,3 +8,5 @@
 
 void Voile_Conf(TIM_TypeDef * Timer);
 
+float Voile_setAngle();
+
