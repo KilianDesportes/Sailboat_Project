@@ -13,7 +13,7 @@ Pupitre        →  TxFM                → INPUT  : USART 9600 bauds - Data
 Alimentation   →  Carte electronique  → OUTPUT : ADC Tension proportionnel valeur de référence
 </pre>
 
-Utilisation librairies LL pour les périphériques USART & GPIO (+ Timer & ADC?).
+Utilisation librairies LL.
 
 Association des PINs aux périphériques :
 
